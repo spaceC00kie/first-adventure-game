@@ -1,31 +1,31 @@
-#defining switch
-def first_choice (dogs_wish):
-	switcher = {
-		'A' : 'Go potty in the yard'
-		'B' : 'Eat breakfast'
-		'C' : 'Go on a walk'
-	}
-	return switcher.get(dogs_wish, "Please make a choice")
+#two layers of if
 
-#game happens in this loop
+#ask user first question. store answer
+x = input("You wake up. Do you want to potty or eat? Choose A or B\n")
 
-is_game_over = False
-while is_game_over ==False:
-	#print original branching question with switch statement
+#if x == A potty Go bother human to be let out
+if x == "A":
+	#Ask user if they want to go on walk. Y or N?
+	y = input("Do you want to go for a walk? Y or N?\n")
+	#if Y go on a walk and find a smell
+	if y == "Y":
+		print("You go on a walk and find a smell.")
+	#elif N stay home and watch tv
+	elif y == "N":
+		print("You stay home and watch tv.")
+	#else Please pick one
 
-	#first question
-	is_first_wish_made = False
-	while is_first_wish_made == False:
-		poodle = input("Wish 1 - Pick A, B, or C")
+#elif x == B eat Go bother human for food
+elif x == "B":
+	#Ask if they want to go for walk. Y or N?
+	y = input ("Do you want breakfast? Y or N?\n")
+	#if Y go on a walk and potty
+	if y == "Y":
+		print("You bring you food bowl to your human.")
+	#elif N stay home and watch tv and wet the floor
+	elif y == "N":
+		print("You stay home and watch tv hungry until you wet the floor.")
+	#else Please pick one
+#else #please make a choice
 
-		print(first_choice(poodle))
 
-		#if the returned statement is "Please make a choice", reloop
-		if x != "Please make a choice":
-			is_first_wish_made = True
-
-	#second question
-	is_second_wish_made = False
-	while is_second_wish_made == False
-		schnauzer = input("Wish 1 - Pick A or B")
-		if schnauzer == "y"
