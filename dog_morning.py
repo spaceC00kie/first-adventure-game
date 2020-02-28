@@ -1,12 +1,9 @@
 def question_one():
 	x = input("You wake up. Do you want to go potty or eat? Choose A or B\n")
+	return x
 
-question_one()
-
-
-def potty_question():
+def potty_and_eat(x):
 	if x == "A":
-
 		usr_ans = "A"
 		#loop until usr_ans is Y or N
 		while usr_ans != "Y" and usr_ans != "N":
@@ -16,26 +13,20 @@ def potty_question():
 			elif usr_ans == "N":
 				print("You are let into the yard to go potty then you come back inside. You're a very low energy dog")
 			else:
-				print("Please pick one, Y or N.")
-
-potty_question()
-
-def food_question():
-	elif x == "B":
+				print("Do you want to go on a walk? Pick Y or N.")
+	if x == "B":
+		usr_ans = "B"
 		#loop until usr_ans is Y or N
 		while usr_ans != "Y" and usr_ans != "N":
 			usr_ans = input ("Do you want to ask for breakfast like a good dog? Y or N?\n")
 			if usr_ans == "Y":
-				print("You bring you food bowl to your human. That's adorable, so your human feeds you immediately.")
+				print("You bring you food bowl to your human. That's adorable, so your human feeds you immediately. It's a good morning!")
 			elif usr_ans == "N":
-				print("You stand by the food and bark at the containter. Your owner is not going to let you tell them what to do by barking. You'll have to wait a while to eat now.")
+				print("You stand by the food and bark at the containter. Your owner will not let you tell them what to do by barking. You'll have to wait a while to eat now.")
 			else:
 				print("You said you wanted to eat. Are you a good dog or not?")
 
-food_question()
+x = question_one()
 
+potty_and_eat(x)
 
-
-
-
-#each question should be its own method
